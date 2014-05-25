@@ -18,5 +18,5 @@ else
 fi
 
 # clean phase
-docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm
+docker images | grep "^yesod" | awk '{print $3}' | xargs docker rmi
 boot2docker stop
