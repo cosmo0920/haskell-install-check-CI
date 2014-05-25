@@ -19,7 +19,7 @@ RUN cabal update
 RUN cabal install cabal-install --global --prefix=/usr/local
 
 # Install yesod
-RUN cabal install yesod yesod-bin persistent-postgresql persistent-sqlite \
+RUN cabal install yesod yesod-bin \
     -fllvm --global --prefix=/usr/local
 
 # RUN SSHD AS THIS CONTAINER'S DEFAULT PROCESS
