@@ -10,11 +10,13 @@ docker ps -a -q | xargs docker rm
 # build phase
 docker build -t yesodbox_"${DATE}" - < Dockerfile
 
-# clean phase
-docker rmi $(docker images | grep "^yesod" | awk "{print $3}")
-boot2docker stop
+# tweet phase
 if [ $? == 0 ]; then
   echo "${BUILD_ENV} \"${CABAL_COMMAND}\" with ${BUILD_ENV} success! at ${DATE}" | tw --user=${TWITTER_USER} --pipe
 else
   echo "${BUILD_ENV} \"${CABAL_COMMAND}\" with ${BUILD_ENV} failure! at ${DATE}" | tw --user=${TWITTER_USER} --pipe
 fi
+
+# clean phase
+docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm
+boot2docker stop
