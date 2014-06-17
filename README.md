@@ -1,7 +1,7 @@
 Jenkins build scripts for daily job
 ===
 
-*experimental*
+__Currently, this scripts is experimental__
 
 daily job executes following command:
 ```bash
