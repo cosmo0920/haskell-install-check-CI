@@ -1,8 +1,8 @@
 export TWITTER_USER=kosmo__
 export CABAL_COMMAND="cabal install yesod yesod-bin aeson-0.7.0.6"
 export DATE="`date +\"%Y/%m/%d %H:%M:%S\"`"
-export BUILD_ENV="OSX: 10.8 ghc: 7.8.3 cabal: 1.20 and HP: 2014.2.0.0"
-echo "=== \"${CABAL_COMMAND}\" with ${BUILD_ENV} scheduled. at ${DATE} ===" | tw --user=${TWITTER_USER} --pipe
+export BUILD_ENV="OSX: 10.8 ghc: 7.6.3 cabal: 1.20 and HP: 2013.2.0.0"
+echo "=\"${CABAL_COMMAND}\" with ${BUILD_ENV} sched. at ${DATE}=" | tw --user=${TWITTER_USER} --pipe
 # check versions
 uname -mprsv
 ghc --version

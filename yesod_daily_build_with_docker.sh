@@ -3,7 +3,7 @@ export DATE="`date +\"%Y/%m/%d %H:%M:%S\"`"
 export CABAL_COMMAND="cabal install yesod yesod-bin"
 export BUILD_ENV="docker: 1.1.2 Ubuntu: 14.04 and HP: 2013.2.0.0"
 export DOCKER_DATE="`date +\"%Y%m%d%H%M%S\"`"
-echo "=== \"${CABAL_COMMAND}\" with ${BUILD_ENV} scheduled. at ${DATE} ===" | tw --user=${TWITTER_USER} --pipe
+echo "=\"${CABAL_COMMAND}\" with ${BUILD_ENV} sched. at ${DATE}=" | tw --user=${TWITTER_USER} --pipe
 # prepare docker
 boot2docker up
 docker ps -a -q | xargs docker rm
