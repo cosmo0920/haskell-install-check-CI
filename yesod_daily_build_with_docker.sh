@@ -6,7 +6,7 @@ export DOCKER_DATE="`date +\"%Y%m%d%H%M%S\"`"
 echo "=\"${CABAL_COMMAND}\" with ${BUILD_ENV} sched. at ${DATE}=" | tw --user=${TWITTER_USER} --pipe
 # prepare docker
 boot2docker up
-docker ps -a -q | xargs docker rm
+docker ps -a -q | xargs docker rmi
 
 # build phase
 docker build -t yesodbox_"${DOCKER_DATE}" - < Dockerfile
