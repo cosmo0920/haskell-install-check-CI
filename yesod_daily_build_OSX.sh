@@ -23,7 +23,7 @@ cabal install alex happy
 cabal install yesod yesod-bin aeson-0.7.0.6 # workaround for aeson
 
 if [ $? == 0 ]; then
-  echo "${BUILD_ENV} \"${CABAL_COMMAND}\" with ${BUILD_ENV} success! at ${DATE}" | tw --user=${TWITTER_USER} --pipe
+  echo "${BUILD_ENV} \"${CABAL_COMMAND}\" success! at ${DATE}" | tw --user=${TWITTER_USER} --pipe
 else
-  echo "${BUILD_ENV} \"${CABAL_COMMAND}\" with ${BUILD_ENV} failure! at ${DATE}" | tw --user=${TWITTER_USER} --pipe
+  echo "${BUILD_ENV} \"${CABAL_COMMAND}\" failure! at ${DATE}" | tw --user=${TWITTER_USER} --pipe
 fi
