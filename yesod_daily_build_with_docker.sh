@@ -15,9 +15,9 @@ docker build -t yesodbox_"${DOCKER_DATE}" - < Dockerfile
 
 # tweet phase
 if [ $? == 0 ]; then
-  echo "${BUILD_ENV} \"${CABAL_COMMAND}\" with ${BUILD_ENV} success! at ${DATE}" | tw --user=${TWITTER_USER} --pipe
+  echo "${BUILD_ENV} \"${CABAL_COMMAND}\" success! at ${DATE}" | tw --user=${TWITTER_USER} --pipe
 else
-  echo "${BUILD_ENV} \"${CABAL_COMMAND}\" with ${BUILD_ENV} failure! at ${DATE}" | tw --user=${TWITTER_USER} --pipe
+  echo "${BUILD_ENV} \"${CABAL_COMMAND}\" failure! at ${DATE}" | tw --user=${TWITTER_USER} --pipe
 fi
 
 # clean phase
