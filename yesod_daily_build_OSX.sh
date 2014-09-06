@@ -15,12 +15,12 @@ fi
 if [ -f cabal.sandbox.config ]; then
   rm cabal.sandbox.config
 fi
-
+export NCPU=`sysctl -n hw.ncpu`
 # install vanilla yesod
 cabal update
 cabal sandbox init
 cabal install alex happy
-cabal install yesod yesod-bin aeson-0.7.0.6
+cabal install -j${NCPU} yesod yesod-bin aeson-0.7.0.6
 
 if [ $? == 0 ]; then
   echo "${BUILD_ENV} \"${CABAL_COMMAND}\" success! at ${DATE}" | tw --user=${TWITTER_USER} --pipe
