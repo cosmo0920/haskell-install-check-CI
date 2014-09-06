@@ -1,5 +1,5 @@
 export TWITTER_USER=kosmo__
-export CABAL_COMMAND="cabal install yesod yesod-bin"
+export CABAL_COMMAND="cabal install yesod yesod-bin aeson-0.7.0.6"
 export DATE="`date +\"%Y/%m/%d %H:%M:%S\"`"
 export BUILD_ENV="OSX: 10.8 ghc: 7.6.3 cabal: 1.20 and HP: 2014.2.0.0"
 echo "=\"${CABAL_COMMAND}\" with ${BUILD_ENV} sched. at ${DATE}=" | tw --user=${TWITTER_USER} --pipe
@@ -20,7 +20,7 @@ fi
 cabal update
 cabal sandbox init
 cabal install alex happy
-cabal install yesod yesod-bin
+cabal install yesod yesod-bin aeson-0.7.0.6
 
 if [ $? == 0 ]; then
   echo "${BUILD_ENV} \"${CABAL_COMMAND}\" success! at ${DATE}" | tw --user=${TWITTER_USER} --pipe

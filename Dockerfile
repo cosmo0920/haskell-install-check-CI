@@ -25,7 +25,7 @@ RUN cabal update
 RUN cabal install cabal-install --global --prefix=/usr/local
 
 # Install yesod
-RUN cabal install yesod yesod-bin \
+RUN cabal install yesod yesod-bin aeson-0.7.0.6 \
     -fllvm --global --prefix=/usr/local
 
 # RUN SSHD AS THIS CONTAINER'S DEFAULT PROCESS
