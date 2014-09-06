@@ -22,6 +22,8 @@ ENV LC_ALL en_US.UTF-8
 
 # Install yesod
 RUN cabal update
+RUN cabal sandbox init
+RUN cabal install alex happy
 RUN cabal install yesod yesod-bin aeson-0.7.0.6 \
     -fllvm --global --prefix=/usr/local
 
