@@ -2,7 +2,10 @@ export TWITTER_USER=kosmo__
 export CABAL_COMMAND="cabal install yesod yesod-bin aeson-0.7.0.6"
 export DATE="`date +\"%Y/%m/%d %H:%M:%S\"`"
 export BUILD_ENV="Ubuntu: 14.04 ghc: 7.6.3 cabal: 1.20"
-echo "=\"${CABAL_COMMAND}\" with ${BUILD_ENV} sched. at ${DATE}=" | tw --user=${TWITTER_USER} --pipe
+if [ ! -d vendor/bundle ]; then
+    bundle install --path vendor/bundle
+fi
+echo "=\"${CABAL_COMMAND}\" with ${BUILD_ENV} sched. at ${DATE}=" | bundle exec tw --user=${TWITTER_USER} --pipe
 # check versions
 uname -mprsv
 ghc --version
