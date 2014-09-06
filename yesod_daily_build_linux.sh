@@ -8,6 +8,9 @@ uname -mprsv
 ghc --version
 cabal --version
 
+# add opt env setting
+export PATH="/opt/ghc/7.8.3/bin:/opt/cabal/1.20/bin:$PATH"
+
 # clean work dir cabal environment
 if [ -d .cabal-sandbox ]; then
   rm -rf ./.cabal-sandbox
