@@ -1,6 +1,6 @@
 export TWITTER_USER=kosmo__
 export DATE="`date +\"%Y/%m/%d %H:%M:%S\"`"
-export CABAL_COMMAND="cabal install yesod yesod-bin"
+export CABAL_COMMAND="cabal install yesod yesod-bin aeson-0.7.0.6"
 export BUILD_ENV="docker: 1.2.0 Ubuntu: 14.04 ghc: 7.8.3"
 export DOCKER_DATE="`date +\"%Y%m%d%H%M%S\"`"
 echo "=\"${CABAL_COMMAND}\" with ${BUILD_ENV} sched. at ${DATE}=" | tw --user=${TWITTER_USER} --pipe
