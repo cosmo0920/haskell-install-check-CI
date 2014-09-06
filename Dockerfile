@@ -11,6 +11,9 @@ RUN add-apt-repository -y ppa:hvr/ghc
 RUN apt-get update
 RUN apt-get install -y build-essential git libpq-dev libsqlite3-dev ghc-7.8.3 cabal-install-1.20 # avoid using `haskell-platform`
 
+# env setting
+ENV PATH /opt/ghc/7.8.3/bin:/opt/cabal/1.20/bin:$PATH
+
 # locale setting
 RUN locale-gen en_US.UTF-8
 RUN update-locale LANG=en_US.UTF-8
