@@ -4,7 +4,7 @@ FROM ubuntu:14.04
 MAINTAINER cosmo0920 <cosmo0920.wp@gmail.com>
 
 # setting apt
-RUN sed 's/main$/main universe/' -i /etc/apt/sources.list
+RUN sed 's/main$/main restricted universe multiverse/' -i /etc/apt/sources.list
 RUN apt-get install software-properties-common
 RUN add-apt-repository -y ppa:hvr/ghc
 RUN apt-get update
