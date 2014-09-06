@@ -26,7 +26,7 @@ cabal install alex happy
 cabal install -j${NCPU} yesod yesod-bin aeson-0.7.0.6
 
 if [ $? == 0 ]; then
-  echo "${BUILD_ENV} \"${CABAL_COMMAND}\" success! at ${DATE}" | tw --user=${TWITTER_USER} --pipe
+  echo "${BUILD_ENV} \"${CABAL_COMMAND}\" success! at ${DATE}" | bundle exec tw --user=${TWITTER_USER} --pipe
 else
-  echo "${BUILD_ENV} \"${CABAL_COMMAND}\" failure! at ${DATE}" | tw --user=${TWITTER_USER} --pipe
+  echo "${BUILD_ENV} \"${CABAL_COMMAND}\" failure! at ${DATE}" | bundle exec tw --user=${TWITTER_USER} --pipe
 fi
