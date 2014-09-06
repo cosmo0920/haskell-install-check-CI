@@ -6,6 +6,7 @@ MAINTAINER cosmo0920 <cosmo0920.wp@gmail.com>
 # setting apt
 RUN sed 's/main$/main restricted universe multiverse/' -i /etc/apt/sources.list
 RUN apt-get update
+RUN apt-get build-dep -y libghc-zlib-dev
 RUN apt-get install -y build-essential git libpq-dev libsqlite3-dev ghc cabal-install # avoid using `haskell-platform`
 
 # locale setting
