@@ -20,11 +20,8 @@ RUN update-locale LANG=en_US.UTF-8
 ENV LC_ALL C
 ENV LC_ALL en_US.UTF-8
 
-# update and install cabal-install
-RUN cabal update
-RUN cabal install cabal-install --global --prefix=/usr/local
-
 # Install yesod
+RUN cabal update
 RUN cabal install yesod yesod-bin aeson-0.7.0.6 \
     -fllvm --global --prefix=/usr/local
 
