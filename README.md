@@ -1,7 +1,7 @@
 Jenkins build scripts for daily job
 ===
 
-__Currently, this scripts is alpha version.__
+__Currently, these scripts are alpha version.__
 
 This script is used CI notify bot [@kosmo\_\_](https://twitter.com/kosmo__)
 
