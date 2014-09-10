@@ -16,5 +16,5 @@ cabal install yesod yesod-bin
     + CI for OSX Environment
 * yesod\_daily\_build\_with\_Docker
     + CI for Docker Envioronment
-* yesod\_daily\_build\_with\_Docker
+* yesod\_daily\_build\_linux
     + CI for Ubuntu Linux Environment(Currently not used. For reference only.)
