@@ -9,3 +9,12 @@ daily job executes following command:
 ```bash
 cabal install yesod yesod-bin
 ```
+
+## Job script description
+
+* yesod\_daily\_build\_OSX
+    + CI for OSX Environment
+* yesod\_daily\_build\_with\_Docker
+    + CI for Docker Envioronment
+* yesod\_daily\_build\_with\_Docker
+    + CI for Ubuntu Linux Environment(Currently not used. For reference only.)
