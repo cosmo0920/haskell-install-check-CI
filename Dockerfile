@@ -19,7 +19,7 @@ ENV LC_ALL en_US.UTF-8
 RUN cabal update
 RUN cabal install alex happy \
     -fllvm --global --prefix=/usr/local
-RUN cabal install yesod yesod-bin aeson-0.7.0.6 \
+RUN cabal install yesod yesod-bin \
     -fllvm --global --prefix=/usr/local
 
 # RUN SSHD AS THIS CONTAINER'S DEFAULT PROCESS

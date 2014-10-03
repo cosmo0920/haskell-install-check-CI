@@ -1,6 +1,6 @@
 export TWITTER_USER=kosmo__
 export DATE="`date +\"%Y/%m/%d %H:%M:%S\"`"
-export CABAL_COMMAND="cabal install yesod yesod-bin aeson-0.7.0.6"
+export CABAL_COMMAND="cabal install yesod yesod-bin"
 export BUILD_ENV="docker: 1.2.0 Ubuntu: 14.04 ghc: 7.6.3"
 export DOCKER_DATE="`date +\"%Y%m%d%H%M%S\"`"
 if [ ! -d vendor/bundle ]; then
