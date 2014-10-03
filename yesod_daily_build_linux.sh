@@ -1,5 +1,5 @@
 export TWITTER_USER=kosmo__
-export CABAL_COMMAND="cabal install yesod yesod-bin aeson-0.7.0.6"
+export CABAL_COMMAND="cabal install yesod yesod-bin"
 export DATE="`date +\"%Y/%m/%d %H:%M:%S\"`"
 export BUILD_ENV="Ubuntu: 14.04 ghc: 7.8.3 cabal: 1.20"
 if [ ! -d vendor/bundle ]; then
@@ -27,7 +27,7 @@ export NCPU=`cat /proc/cpuinfo | grep processor | wc -l`
 cabal update
 cabal sandbox init
 cabal install alex happy
-cabal install -j${NCPU} yesod yesod-bin aeson-0.7.0.6
+cabal install -j${NCPU} yesod yesod-bin
 
 if [ $? == 0 ]; then
   echo "${BUILD_ENV} \"${CABAL_COMMAND}\" success! at ${DATE}" | bundle exec tw --user=${TWITTER_USER} --pipe
